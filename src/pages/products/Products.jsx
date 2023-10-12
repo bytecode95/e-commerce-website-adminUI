@@ -8,7 +8,7 @@ import {Form} from "react-bootstrap";
 import DeleteIcon from '@mui/icons-material/Delete';
 import instance from "../../service/axiosOrder.js";
 import EditIcon from '@mui/icons-material/Edit';
-// import beforeimage from "../../assets/picture.png";
+import Base_Url from '../../common/Base_URL.jsx'
 
 
 export default function Products(){
@@ -109,7 +109,7 @@ export default function Products(){
                     product.map((val,index)=>(
                         <Col key={index} >
                             <Card style={{ width: '20rem' }} className="shadow" >
-                                <Card.Img  style={{width:'200px', height:'200px',margin:'auto',marginTop:'10px'}} src={`http://192.168.8.187:4000/uploads/${val.pro_image}`} />
+                                <Card.Img  style={{width:'200px', height:'200px',margin:'auto',marginTop:'10px'}} src={`${Base_Url}${val.pro_image}`} />
                                 <Card.Body style={{textAlign:'center'}}>
                                     <Card.Title >{val.pro_name}</Card.Title>
                                     <Button onClick={()=>deleteproductData(val.id)} style={{margin:'5px'}} variant="danger"><span><DeleteIcon/>Delete</span></Button>

@@ -208,89 +208,89 @@ export default function Dashboard(){
     return(
         <>
             <h3 className="mb-4 title">Dashboard</h3>
-            <div className="d-flex  justify-content-between align-items-center gap-3">
-                <div className="d-flex justify-content-between align-items-end  bg-white p-3 roudned-3">
+            <div className="d-flex flex-wrap  justify-content-between align-items-center gap-3">
+                <div style={{backgroundColor:'#76d300'}} className="d-flex justify-content-between align-items-end shadow-lg p-3 roudned-3">
                     <div>
-                        <p className="desc">Customers</p>
+                        <p >Customers</p>
                         <span><PeopleIcon/></span>
-                        <h4 className="mb-0 sub-title">$1100</h4>
+                        <h4 className="mb-0 ">$1100</h4>
                     </div>
                     <div className="d-flex flex-column align-items-end">
                         <h6>
                             <SouthEastIcon /> 32%
                         </h6>
-                        <p className="mb-0  desc">Compared To August 2023</p>
+                        <p className="mb-0 ">Compared To August 2023</p>
                     </div>
                 </div>
-                <div className="d-flex justify-content-between align-items-end  bg-white p-3 roudned-3">
+                <div style={{backgroundColor:'#e22137'}} className="d-flex justify-content-between align-items-end shadow-lg p-3 roudned-3">
                     <div>
-                        <p className="desc">Orders</p>
+                        <p >Orders</p>
                         <span><Shop2Icon/></span>
-                        <h4 className="mb-0 sub-title">$1100</h4>
+                        <h4 className="mb-0 ">$1100</h4>
                     </div>
                     <div className="d-flex flex-column align-items-end">
-                        <h6 className="red">
+                        <h6 >
                             <SouthEastIcon /> 32%
                         </h6>
-                        <p className="mb-0  desc">Compared To August 2023</p>
+                        <p className="mb-0 ">Compared To August 2023</p>
                     </div>
                 </div>
-                <div className="d-flex justify-content-between align-items-end  bg-white p-3 roudned-3">
+                <div style={{backgroundColor:'#b800d8'}} className="d-flex justify-content-between align-items-end shadow-lg p-3 roudned-3">
                     <div>
-                        <p className="desc">Delivery</p>
+                        <p >Delivery</p>
                         <span><LocalShippingIcon/></span>
-                        <h4 className="mb-0 sub-title">$1100</h4>
+                        <h4 className="mb-0 ">$1100</h4>
                     </div>
                     <div className="d-flex flex-column align-items-end">
-                        <h6 className="green">
+                        <h6 >
                             <SouthEastIcon /> 32%
                         </h6>
-                        <p className="mb-0 desc">Compared To August 2023</p>
+                        <p className="mb-0">Compared To August 2023</p>
                     </div>
                 </div>
-                <div className="d-flex justify-content-between align-items-end  bg-white p-3 roudned-3">
+                <div style={{backgroundColor:'#f9ad02'}} className="d-flex justify-content-between align-items-end shadow-lg p-3 roudned-3">
                     <div>
-                        <p className="desc">Total Profit</p>
+                        <p >Total Profit</p>
                         <span><MonetizationOnIcon/></span>
-                        <h4 className="mb-0 sub-title">$1100</h4>
+                        <h4 className="mb-0 ">$1100</h4>
                     </div>
                     <div className="d-flex flex-column align-items-end">
-                        <h6 className="green">
+                        <h6 >
                             <SouthEastIcon /> 32%
                         </h6>
-                        <p className="mb-0 desc">Compared To August 2023</p>
+                        <p className="mb-0 ">Compared To August 2023</p>
                     </div>
                 </div>
             </div>
             <h3 className="text-center mt-5">Sales Statics</h3>
-            <div className="mt-4 d-flex align-items-center justify-content-center">
+            <div className="mt-4 d-flex align-items-center shadow justify-content-center">
 
                 <div>
                     <BarChart
                         dataset={dataset}
                         xAxis={[{ scaleType: 'band', dataKey: 'month' }]}
                         series={[
-                            { dataKey: 'london', label: 'London', valueFormatter },
+                            { dataKey: 'london', label: 'Sales', valueFormatter },
 
                         ]}
                         {...chartSetting}
                     />
                 </div>
 
-                <div className="mt-3">
+                <div className="w-25 mt-3 shadow">
                     <PieChart
                         series={[
                             {
                                 data: chartData.slice(0,4),
                             },
                         ]}
-                        width={400}
-                        height={200}
+                        width={500}
+                        height={300}
                     />
                 </div>
 
             </div>
-            <h3 className="mb-3 text-center">Recent Orders</h3>
+            <h3 className="mb-3 mt-3 text-center">Recent Orders</h3>
             <Paper sx={{ width: '100%', overflow: 'hidden' }}>
                 <TableContainer sx={{ maxHeight: 440 }}>
                     <Table stickyHeader aria-label="sticky table">
