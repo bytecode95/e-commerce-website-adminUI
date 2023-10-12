@@ -174,7 +174,7 @@ export default function Login() {
                             onChange={(val)=>{setPassword(val.target.value)}}
                             size="small"
                             style={{padding:'15px'}}
-
+                            type = {showPassword ? 'text' : 'password'}
                             label=""
                             InputProps={{
                                 style:{width:300},
